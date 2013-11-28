@@ -1,0 +1,27 @@
+{
+  "manifest_version": 2,
+
+  "name": "Area Selection",
+  "description": "Area Selection...",
+  "version": "0.1",
+  "author": "Alexander Subota",
+
+  "browser_action": {
+    "default_icon": "/css/img/icon.png"
+  },
+
+  "icons": {
+    "48": "/css/img/icon.png"
+  },
+
+  "options_page": "/html/options.html",
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "css": ["/css/content_script.css"],
+      "js": ["/js/jquery-2.0.3.min.js", "data.json", "/js/tools.js", "/js/content_script.js"]
+    }
+  ]
+
+}
