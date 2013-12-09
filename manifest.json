@@ -10,6 +10,15 @@
     "default_icon": "/css/img/icon.png"
   },
 
+  "background": {
+    "persistent": false,
+    "scripts": ["/js/jquery-2.0.3.min.js", "/js/FileSaver.min.js", "data.json", "/js/tools.js", "/js/background.js"]
+  },
+
+  "permissions": [
+    "tabs", "<all_urls>"
+  ],
+
   "icons": {
     "48": "/css/img/icon.png"
   },
@@ -20,7 +29,7 @@
     {
       "matches": ["<all_urls>"],
       "css": ["/css/content_script.css"],
-      "js": ["/js/jquery-2.0.3.min.js", "data.json", "/js/tools.js", "/js/content_script.js"]
+      "js": ["/js/jquery-2.0.3.min.js", "/js/jquery-ui-1.10.3.custom.min.js", "data.json", "/js/tools.js", "/js/content_script.js"]
     }
   ]
 

@@ -1,6 +1,14 @@
-var _mns = {
+var _mns_settings = {
 	"default": {
 		"color": "ffccfc",
-		"opacity": 0.35
-	}
+		"opacity": 0.35,
+		"action": "page",
+		"screenshot_name": function() {
+			var d = new Date();
+
+			// mns_17-5-46.png
+			return "mns_"+d.getHours()+"-"+d.getMinutes()+"-"+d.getSeconds()+".png";
+		}
+	},
+	"actions": ["crop", "page"]
 }

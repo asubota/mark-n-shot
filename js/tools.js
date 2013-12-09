@@ -3,6 +3,5 @@ var cl = function (msg) {
 }
 
 var _get = function (key) {
-	return localStorage[key] || _mns.default[key];
+	return localStorage[key] || ((typeof _mns_settings.default[key] === 'function') ? _mns_settings.default[key]() : _mns_settings.default[key]);
 }
-
