@@ -10,5 +10,6 @@ var _mns_settings = {
 			return "mns_"+d.getHours()+"-"+d.getMinutes()+"-"+d.getSeconds()+".png";
 		}
 	},
+
 	"actions": ["crop", "page"]
 }

@@ -2,7 +2,7 @@ var cl = function(msg) {
 	console.log(msg);
 };
 
-var _mns = (function () {
+var _mns = (function() {
 
 	var port = chrome.runtime.connect({"name": "mns"}),
 
@@ -43,7 +43,7 @@ var _mns = (function () {
 			return !!$('body #mns-container').length;
 		},
 
-		 insert = function() {
+		insert = function() {
 			$('body').prepend(data.$container);
 			data.inserted = true;
 		},

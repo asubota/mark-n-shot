@@ -1,6 +1,5 @@
 
 var _actions = (function() {
-
   var get_blob = function(screenshotUrl) {
     var base64Image = screenshotUrl.split("data:image/png;base64,")[1],
       binaryImg = atob(base64Image),
@@ -13,28 +12,24 @@ var _actions = (function() {
     }
 
     return new Blob([ab], {type: "image/png"});
-  };
+  },
 
-  var crop = function() {
+  crop = function() {
     alert('crop');
-  };
+  },
 
-  var page = function() {
+  page = function() {
     chrome.tabs.captureVisibleTab(null, {format:'png'}, function (screenshotUrl) {
       var blob = get_blob(screenshotUrl);
-      try {
-        saveAs(blob, _get('screenshot_name'));
-      } catch (e) {
-      }
+      saveAs(blob, _get('screenshot_name'));
     });
-  };
+  },
 
-  var listen = function (port) {
+  listen = function (port) {
     bindEvents(port);
-  };
+  },
 
-  var bindEvents = function(port) {
-    console.log(port);
+  bindEvents = function(port) {
 
     chrome.browserAction.onClicked.addListener(function() {
       port.postMessage({"action": "start"});
