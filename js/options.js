@@ -1,5 +1,7 @@
 $(function() {
 
+
+
     var OptionModel = Backbone.Model.extend({
         initialize: function() {
             this.on('change', function(event) {
@@ -20,11 +22,14 @@ $(function() {
         events:{
             'keyup input': 'action'
         },
+
+        template: _.template($("#optionTemplate").html()),
+
         initialize: function() {
             this.listenTo(this.model, 'change', this.render);
         },
         render: function() {
-            this.$el.html('<input type="text" value="' + this.model.get('value') + '" name="' + this.model.get('name') + '" /> ' + this.model.get('name'));
+            this.$el.html( this.template(this.model.toJSON() ));
             return this;
         },
         action: function(event) {

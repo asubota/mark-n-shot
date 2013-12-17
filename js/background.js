@@ -15,7 +15,7 @@ var _actions = (function() {
   },
 
   crop = function() {
-    alert('crop');
+    
   },
 
   page = function() {

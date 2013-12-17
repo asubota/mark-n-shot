@@ -1,5 +1,18 @@
-#wrapper{
+body {
+	padding: 0;
+	margin: 0;
+}
+
+#container {
 	margin: 0 auto;
-	width: 60%;
-	margin-top: 75px;	
+	width: 50%;
+	padding: 10px;
+}
+
+#header {
+
+}
+
+#options .option {
+	padding: 15px;
 }

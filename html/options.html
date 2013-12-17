@@ -7,14 +7,45 @@
 
 <title>Mark-n-shot options</title>
 
+<link rel="stylesheet" type="text/css" href="/css/semantic.min.css">
 <link rel="stylesheet" type="text/css" href="/css/options.css">
 </head>
 <body>
+	<div id="container">
 
-  <h3>Mark-n-shot options</h3>
-  <div id="options"></div>
+		<div id="header">
+			<h2 class="ui header">
+				<i class="settings icon"></i>
+				<div class="content">
+					Mark-n-shot options
+					<div class="sub header">Manage your settings and preferences.</div>
+				</div>
+			</h2>
+			<div class="ui divider"></div>
+		</div>
+<div class="ui one column grid">
+  <div class="column">
+    <div class="ui segment">
+		<div id="options"></div>
+    </div>
+  </div>
+  
+</div>
+
+  </div>
 
 </body>
+
+
+<script type="text/template" id="optionTemplate">
+<div class="ui labeled input">
+	<input type="text" placeholder="<%= name %>..." value="<%= value %>">
+	<div class="ui corner label">
+		<i class="asterisk icon"></i>
+	</div>
+</div>
+<%= name %>
+</script>
 
 <script src="/js/jquery/jquery-2.0.3.min.js"></script>
 <script src="../data.json"></script>
